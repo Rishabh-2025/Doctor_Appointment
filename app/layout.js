@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "sonner";
 import Header from "@/components/header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
           {/* header */}
           <Header/>
           <main className="min-h-screen">
+            <Toaster richColors />
             {children}
           </main>
 
